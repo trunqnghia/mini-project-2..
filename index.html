@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>URL Explorer</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -11,95 +12,198 @@
 
     <header>
         <h1>🌐 URL Explorer</h1>
-        <p>Khám phá Domain, Hosting và URL</p>
+        <p>Khám phá Domain, Hosting và URL trên Internet</p>
     </header>
+
+    <nav>
+        <a href="#domain">Domain</a>
+        <a href="#hosting">Hosting</a>
+        <a href="#url">URL</a>
+        <a href="#examples">Ví dụ URL</a>
+    </nav>
 
     <main>
 
-        <section class="card">
-            <h2>Domain là gì?</h2>
+        <section id="intro">
+            <h2>Giới thiệu</h2>
+
             <p>
-                Domain (tên miền) là địa chỉ giúp người dùng truy cập website
-                thay vì phải nhớ địa chỉ IP dài và khó nhớ.
+                Khi truy cập một website, chúng ta thường nhập địa chỉ như:
+                https://www.google.com hoặc https://www.youtube.com.
             </p>
 
-            <div class="example">
-                Ví dụ: google.com, github.com, openai.com
+            <p>
+                Để website hoạt động cần có ba thành phần quan trọng:
+                <strong>Domain</strong>,
+                <strong>Hosting</strong> và
+                <strong>URL</strong>.
+            </p>
+        </section>
+
+        <section id="domain">
+            <h2>1. Domain là gì?</h2>
+
+            <p>
+                Domain (tên miền) là địa chỉ dễ nhớ dùng để truy cập website.
+                Thay vì phải nhớ một dãy số IP phức tạp, người dùng chỉ cần
+                nhập tên miền.
+            </p>
+
+            <div class="card">
+                <h3>Ví dụ Domain</h3>
+                <ul>
+                    <li>google.com</li>
+                    <li>youtube.com</li>
+                    <li>github.com</li>
+                </ul>
+            </div>
+
+            <p>
+                Có thể xem domain giống như địa chỉ nhà giúp người khác tìm đến đúng nơi.
+            </p>
+        </section>
+
+        <section id="hosting">
+            <h2>2. Hosting là gì?</h2>
+
+            <p>
+                Hosting là nơi lưu trữ toàn bộ dữ liệu của website như:
+            </p>
+
+            <ul>
+                <li>Trang HTML</li>
+                <li>Tệp CSS</li>
+                <li>JavaScript</li>
+                <li>Hình ảnh</li>
+                <li>Cơ sở dữ liệu</li>
+            </ul>
+
+            <div class="card">
+                <p>
+                    Nếu Domain là địa chỉ nhà thì Hosting chính là ngôi nhà
+                    chứa toàn bộ nội dung của website.
+                </p>
             </div>
         </section>
 
-        <section class="card">
-            <h2>Hosting là gì?</h2>
-            <p>
-                Hosting là nơi lưu trữ mã nguồn, hình ảnh, dữ liệu của website
-                để website có thể hoạt động trên Internet.
-            </p>
+        <section id="url">
+            <h2>3. URL là gì?</h2>
 
-            <div class="example">
-                Ví dụ: GitHub Pages, Vercel, Netlify, Hostinger...
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>URL là gì?</h2>
             <p>
-                URL (Uniform Resource Locator) là địa chỉ đầy đủ của một tài
-                nguyên trên Internet.
+                URL (Uniform Resource Locator) là địa chỉ đầy đủ dùng để truy cập
+                một tài nguyên trên Internet.
             </p>
 
             <div class="url-box">
-                https://www.example.com/products/laptop?id=123
+                https://www.example.com/products/laptop?id=10
             </div>
+
+            <h3>Cấu trúc URL</h3>
+
+            <table>
+                <tr>
+                    <th>Thành phần</th>
+                    <th>Ví dụ</th>
+                    <th>Ý nghĩa</th>
+                </tr>
+
+                <tr>
+                    <td>Protocol</td>
+                    <td>https://</td>
+                    <td>Giao thức truyền dữ liệu</td>
+                </tr>
+
+                <tr>
+                    <td>Domain</td>
+                    <td>example.com</td>
+                    <td>Tên miền website</td>
+                </tr>
+
+                <tr>
+                    <td>Path</td>
+                    <td>/products</td>
+                    <td>Đường dẫn đến tài nguyên</td>
+                </tr>
+
+                <tr>
+                    <td>Query</td>
+                    <td>?id=10</td>
+                    <td>Tham số gửi lên máy chủ</td>
+                </tr>
+            </table>
         </section>
 
-        <section class="card">
-            <h2>Cấu trúc URL</h2>
+        <section id="examples">
+            <h2>4. Minh họa URL mẫu</h2>
 
-            <ul>
-                <li><strong>https</strong> → giao thức</li>
-                <li><strong>www.example.com</strong> → domain</li>
-                <li><strong>/products/laptop</strong> → đường dẫn</li>
-                <li><strong>?id=123</strong> → query string</li>
-            </ul>
-        </section>
+            <div class="example">
 
-        <section class="card">
-            <h2>Ví dụ URL mẫu</h2>
+                <h3>Ví dụ 1</h3>
 
-            <div class="sample-url">
-                <h3>URL 1</h3>
-                <p>
+                <div class="url-box">
+                    https://www.google.com/search?q=html
+                </div>
+
+                <ul>
+                    <li>Protocol: https</li>
+                    <li>Domain: google.com</li>
+                    <li>Path: /search</li>
+                    <li>Query: q=html</li>
+                </ul>
+
+            </div>
+
+            <div class="example">
+
+                <h3>Ví dụ 2</h3>
+
+                <div class="url-box">
                     https://github.com/user/project
-                </p>
+                </div>
+
+                <ul>
+                    <li>Protocol: https</li>
+                    <li>Domain: github.com</li>
+                    <li>Path: /user/project</li>
+                    <li>Không có Query String</li>
+                </ul>
+
             </div>
 
-            <div class="sample-url">
-                <h3>URL 2</h3>
-                <p>
-                    https://www.youtube.com/watch?v=abc123
-                </p>
-            </div>
         </section>
 
-        <section class="card">
-            <h2>Kiểm tra URL</h2>
+        <section id="summary">
 
-            <input
-                type="text"
-                id="urlInput"
-                placeholder="Nhập URL..."
-            >
+            <h2>Tóm tắt</h2>
 
-            <button onclick="analyzeURL()">
-                Phân tích URL
-            </button>
+            <table>
+                <tr>
+                    <th>Khái niệm</th>
+                    <th>Chức năng</th>
+                </tr>
 
-            <div id="result"></div>
+                <tr>
+                    <td>Domain</td>
+                    <td>Địa chỉ của website</td>
+                </tr>
+
+                <tr>
+                    <td>Hosting</td>
+                    <td>Lưu trữ dữ liệu website</td>
+                </tr>
+
+                <tr>
+                    <td>URL</td>
+                    <td>Địa chỉ đầy đủ của tài nguyên</td>
+                </tr>
+            </table>
+
         </section>
 
     </main>
 
     <footer>
+        <p id="date"></p>
         <p>Mini-project 2 - URL Explorer</p>
     </footer>
 
